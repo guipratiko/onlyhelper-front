@@ -3,6 +3,11 @@ import { createContext, useContext, useEffect, useState } from 'react';
 function getWsUrl() {
   const api = import.meta.env.VITE_API_URL || '';
   if (api) return api.replace(/^http/, 'ws').replace(/\/$/, '') + '/ws';
+  // Produção com mesmo origem: usar host atual
+  if (typeof window !== 'undefined' && window.location) {
+    const protocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
+    return `${protocol}//${window.location.host}/ws`;
+  }
   return 'ws://localhost:4000/ws';
 }
 
