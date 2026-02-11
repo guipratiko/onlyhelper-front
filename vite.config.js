@@ -6,6 +6,11 @@ export default defineConfig({
   server: {
     port: 3000,
     host: true,
+    allowedHosts: [
+      'onlyhelper-frontend.rfxeig.easypanel.host',
+      '.easypanel.host',
+      'helper.onlyflow.com.br',
+    ],
     proxy: {
       '/api': {
         target: 'http://localhost:4000',
