@@ -1,0 +1,56 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-dark: #0a0a0b;
+  --bg-card: #141416;
+  --border: #2a2a2e;
+  --text: #f4f4f5;
+  --text-muted: #a1a1aa;
+  --accent: #e11d48;
+  --accent-hover: #f43f5e;
+  --gradient-start: #6366f1;
+  --gradient-end: #a855f7;
+  --input-bg: #18181b;
+  --radius: 12px;
+  --font-sans: 'DM Sans', system-ui, sans-serif;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--font-sans);
+  background: var(--bg-dark);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.layoutWrap {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.layoutWrap main {
+  flex: 1;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+input, button {
+  font-family: inherit;
+}

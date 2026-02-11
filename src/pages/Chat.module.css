@@ -1,0 +1,289 @@
+.page {
+  width: 100%;
+  background: var(--bg-dark);
+  padding: 24px;
+}
+
+.pageInner {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.backBtn {
+  padding: 8px 12px;
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.backBtn:hover {
+  border-color: var(--text-muted);
+  color: var(--text);
+}
+
+.ticketId {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  font-family: monospace;
+}
+
+.closeBtn {
+  padding: 8px 14px;
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text-muted);
+  font-size: 0.875rem;
+  cursor: pointer;
+}
+
+.closeBtn:hover:not(:disabled) {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.closeBtn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.error {
+  padding: 10px 14px;
+  margin-bottom: 16px;
+  background: rgba(225, 29, 72, 0.15);
+  border: 1px solid rgba(225, 29, 72, 0.4);
+  border-radius: 8px;
+  color: #fda4af;
+  font-size: 0.875rem;
+}
+
+.loading {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.messagesWrap {
+  min-height: 300px;
+  max-height: 50vh;
+  overflow-y: auto;
+  padding: 16px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  margin-bottom: 16px;
+}
+
+.msgVisitor,
+.msgAttendant {
+  margin-bottom: 12px;
+  max-width: 85%;
+}
+
+.msgVisitor {
+  margin-right: auto;
+}
+
+.msgAttendant {
+  margin-left: auto;
+}
+
+.msgContent {
+  display: block;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  word-break: break-word;
+}
+
+.msgVisitor .msgContent {
+  background: var(--border);
+  color: var(--text);
+}
+
+.msgAttendant .msgContent {
+  background: var(--accent);
+  color: white;
+}
+
+.msgTime {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+.msgImgWrap {
+  display: block;
+  margin-bottom: 4px;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  text-align: left;
+}
+
+.msgImg {
+  max-width: 100%;
+  max-height: 240px;
+  border-radius: 8px;
+  display: block;
+}
+
+.previewWrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  padding: 8px;
+  background: var(--input-bg);
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}
+
+.previewImg {
+  max-width: 80px;
+  max-height: 60px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.previewRemove {
+  padding: 4px 10px;
+  font-size: 0.8rem;
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text-muted);
+  cursor: pointer;
+}
+
+.previewRemove:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.formRow {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.formRow .input {
+  flex: 1;
+  min-width: 0;
+}
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 24px;
+}
+
+.lightboxClose {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  font-size: 1.5rem;
+  line-height: 1;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightboxClose:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.lightboxImg {
+  max-width: 100%;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.fileInput {
+  position: absolute;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.attachBtn {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--input-bg);
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.attachBtn:hover {
+  border-color: var(--text-muted);
+}
+
+.input {
+  flex: 1;
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--input-bg);
+  color: var(--text);
+  font-size: 1rem;
+}
+
+.input::placeholder {
+  color: var(--text-muted);
+}
+
+.sendBtn {
+  padding: 12px 20px;
+  border-radius: 8px;
+  border: none;
+  background: var(--accent);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.sendBtn:hover:not(:disabled) {
+  background: var(--accent-hover);
+}
+
+.sendBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

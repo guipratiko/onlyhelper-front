@@ -1,0 +1,128 @@
+.page {
+  min-height: 100vh;
+  width: 100%;
+  background: var(--bg-dark);
+  background-image: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(99, 102, 241, 0.12), transparent),
+    radial-gradient(ellipse 60% 40% at 100% 50%, rgba(168, 85, 247, 0.06), transparent);
+}
+
+.bar {
+  border-bottom: 1px solid var(--border);
+  background: var(--bg-card);
+  padding: 16px 24px;
+}
+
+.barInner {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.backLink {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.backLink:hover {
+  color: var(--accent);
+}
+
+.inner {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 24px 48px;
+}
+
+.title {
+  margin: 0 0 8px;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.updated {
+  margin: 0 0 32px;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+.section {
+  margin-bottom: 28px;
+}
+
+.sectionTitle {
+  margin: 0 0 10px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.section p {
+  margin: 0 0 12px;
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--text-muted);
+}
+
+.section p:last-child {
+  margin-bottom: 0;
+}
+
+.section ul,
+.section ol {
+  margin: 0 0 12px;
+  padding-left: 1.5rem;
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--text-muted);
+}
+
+.section li {
+  margin-bottom: 10px;
+}
+
+.section code {
+  font-family: ui-monospace, 'Cascadia Code', Menlo, monospace;
+  font-size: 0.9em;
+  padding: 2px 6px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 4px;
+  color: var(--text);
+}
+
+.section li:last-child {
+  margin-bottom: 0;
+}
+
+.codeWrap {
+  margin: 12px 0;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.code {
+  display: block;
+  margin: 0;
+  padding: 16px 20px;
+  font-family: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, monospace;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: var(--text);
+  overflow-x: auto;
+  white-space: pre;
+}
+
+.codeLabel {
+  display: block;
+  margin: 0 0 6px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
